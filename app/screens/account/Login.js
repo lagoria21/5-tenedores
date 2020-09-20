@@ -28,7 +28,7 @@ function CreateAccount() {
       Aun no tienes una cuenta?
       <Text
         style={styles.btnRegister}
-        onPress={() => navigation.natigate("register")}
+        onPress={() => navigation.navigate("register")}
       >
         Registrate
       </Text>
