@@ -1,10 +1,25 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Input, Icon, Button } from "react-native-elements";
 
 export default function RegisterForm(){
     return(
-        <View>
-            <Text>Register form....</Text>
+        <View style={styles.formContainer}>
+            <Input placeholder="Correo electronico" containerStyle={styles.inputForm}/>
+            <Input placeholder="Contraseña" 
+                   containerStyle={styles.inputForm} 
+                   password={true} 
+                   secureTextEntry={true}/>
+            <Input placeholder="Repetir Contraseña" 
+                    containerStyle={styles.inputForm}
+                    password={true} 
+                    secureTextEntry={true}
+                    />
+             <Button title="Unirse" containerStyle={styles.btnContainerRegister}
+             buttonStyle={styles.btnRegister}
+             />
+                     
+
         </View>
     );
 }
@@ -12,9 +27,9 @@ export default function RegisterForm(){
 
 const styles = StyleSheet.create({
     formContainer: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
+     // flex: 1,
+     // alignItems: "center",
+     // justifyContent: "center",
       marginTop: 30,
     },
     inputForm: {
